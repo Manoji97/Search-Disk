@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Disk</title>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="search_key"></label>
+        <input type="text" name="search_key"/>
+        <input type="submit" value="search">
+    </form>
+
+    <div class="main-content">
+        {% for type in res_list %}
+            {% for file in res_list[type] %}
+                <p>{{file.name}}    {{file.location}}</p>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+</body>
+</html>
